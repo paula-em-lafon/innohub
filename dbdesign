@@ -14,9 +14,34 @@ CREATE TABLE vehicles
 
 CREATE TABLE vehicle_in_use
 (
-pK vehículo_in_use_id
-FK user INT REFERENCES users(user_id)
+vehículo_in_use_id INT NOT NULL, #pk
+user INT REFERENCES users(user_id)
+date_limit Date NOT NULL
 CONSTRAINT unique_user UNIQUE (user)
 FK vehicle INT REFERENCES vehicles(vehicle_id)
 CONSTRAINT unique_vehicle UNIQUE (SGID)
 CHECK (vehicle_in_use.vehicle IN(vehicles.vehicle_id from vehicles as left join on vehicles.user = vehicle_in_use.vehicle))
+
+Sección b problema B
+Orden
+Numero Pk
+Fecha
+Usuario Fk
+Producto
+
+Usuario 
+id Pk
+
+Inventario
+id pk
+producto fk
+cantidad
+Almacen FK
+
+Prodcto
+id PK
+Precio
+Descripción
+
+Almacen 
+id PK
