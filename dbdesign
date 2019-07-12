@@ -1,0 +1,22 @@
+Sección b 1:
+
+CREATE TABLE users
+(user_id INT NOT NULL, #pk
+name VARCHAR(50) NOT NULL
+)
+
+CREATE TABLE vehicles
+(vehicle_id INT NOT NULL, #pk
+ plates VARCHAR(7) NOT NULL,
+ model VARCHAR(50),
+ FK user INT REFERENCES users(user_id) #fk
+)
+
+CREATE TABLE vehicle_in_use
+(
+pK vehículo_in_use_id
+FK user INT REFERENCES users(user_id)
+CONSTRAINT unique_user UNIQUE (user)
+FK vehicle INT REFERENCES vehicles(vehicle_id)
+CONSTRAINT unique_vehicle UNIQUE (SGID)
+CHECK (vehicle_in_use.vehicle IN(vehicles.vehicle_id from vehicles as left join on vehicles.user = vehicle_in_use.vehicle))
