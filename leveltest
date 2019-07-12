@@ -1,0 +1,34 @@
+{
+"DataA": {
+    "name":"One name"
+    "Level": "One",
+    "Priority": "Highest",
+"SubdataA":
+{
+    "name":"One nameSubdataA"
+    "Level": "One",
+        "Priority": "Highest",
+}
+"SubdataA": {
+    "name":"One nameSubdataA2"
+    "Level": "Two",
+        "Priority": "High",
+        "SubdataAA":{
+            "name":"One nameSubdataAA"
+                "level": "One",
+                "Priority": "Highest",
+            }
+}
+}
+"DataB": {
+    "name":"One nameB"
+    "Level": "Two",
+    "Priority": "Highest",
+"SubdataB":
+{
+    "name":"One nameSubdataB"
+    "Level": "One",
+        "Priority": "Highest",
+}
+}
+}
