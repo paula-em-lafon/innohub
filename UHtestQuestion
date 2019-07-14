@@ -1,0 +1,41 @@
+Note: I was going to just not do this question, but then I figured: Worst case I learn something,
+best case I get a job, so I deided to gie it a shot. In the end the question resultend on being easier than I thought
+So sorry for not doint it immediately when I had the chance.
+
+
+Tipo de usuario: cliente
+
+User history - tests:
+
+a) Suscribirse a un canal premium por periodos flexibles de tiempo
+
+b) A través del sitio web.
+
+A partir de la informacion dada puedo extrapolar lo siguiente:
+
+1: Se puede recibir la información del sitio web a través de un api
+
+2: se realiza un cobro de forma periódica ya sea a tarjeta, paypal o similar
+  Esto muy probablemente requiera una api para pagos
+
+3: Hay varios periodos de tiempo y el usuario puede cambiar la forma en que realiza
+  sus pagos a través del sitio web
+  
+4: El sitio web debe de funcionar para todas las formas de pago y periodos disponibles
+
+5: Es posible que el sitio tenga una versión web.
+
+Basada en estas asumpsiones, propongo los siguientes tests:
+
+1: Tests para crud de la api utilizando todas las formas de pago y todos los periodos disponibles
+  Se pueden realizar con un modulo de testing. Ej: En Django se puede usar el modo nativo o una suite
+  como tux, que hace practicamente lo mismo
+
+2: Prueba a la api de pago exclusivamente, sin crear suscripciones de prueba.
+  Se puede hacer enviando requests a la apí en modo de prueba el cual debería de ser accesible
+  como sandbox account o algo similar
+
+3: pruebas de usabiliad utilizando una herramienta como Optimizely para saber si en algún momento
+  Hay algún problema con la experiencia del usuario como cargas lentas de medios o cosas por el estilo
+  
+4: Usar la misma herramienta de testing para verificar el sitio web mobil.
