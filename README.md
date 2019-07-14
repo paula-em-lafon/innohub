@@ -25,3 +25,16 @@ run cat leveltest | level.py insert_test
 # Badminton.py
 
 finally to run the badminton counter use $python badminton.py and press '1' to score for player one and '2' for player two
+
+
+# dbdesign
+
+These are the database tests.
+
+It's worth mentioning that part b of this test was delivered about an hour after the official end of the test
+
+# UHTestQuestion
+
+Testing plan question about user suscruption to a premium service
+
+I delivered this one two days late since I decided it couldn't hurt at this point
